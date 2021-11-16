@@ -30,8 +30,8 @@ while True:
       ay -= y
   f = g << abs(7-ax)
   e = ~f & mask
-  #a = multiprocessing.Array('i',8)
-  a = [0,0,0,0,0,0,0,0]
+  a = multiprocessing.Array('i',8)
+  #a = [0,0,0,0,0,0,0,0]
   a[ay] = e
   #p = LED8x8Copy(dataPin,latchPin,clockPin, ay, a)
   LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)

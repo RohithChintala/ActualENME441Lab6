@@ -18,22 +18,22 @@ class LED8x8(multiprocessing.Process): #declares LED8x8 as a multiprocessing cla
         y = random.randint(-1, 1) #sets y to be a random number between -1 and 1
         ax += x #increases ax by x
         ay += y #increases ay by y
-        if ax >= 1: #checks that ax is on
-          if ax <= 8:
-            if ay >= 1:
-              if ay <= 8:
-                h = 1
+        if ax >= 0: #checks that ax is within the led screen
+          if ax <= 7: 
+            if ay >= 0:
+              if ay <= 7:
+                h = 1 #if final movement is within leds then exits while loop
         else:
-          h = 0
-          ax -= x
-          ay -= y
-      f = g << abs(8-ax)
-      e = ~f & mask
-      a[ay] = e
-      self.p = multiprocessing.Process(name='myname', target = self.display(ay, a), args = (ay, a))
-      self.p.daemon = True
-      self.p.start()
-      time.sleep(0.1)
+          h = 0 #if movement is outside of leds then while loop continues
+          ax -= x #resests ax to original value
+          ay -= y #resets ay to original value
+      f = g << abs(8-ax) #sets f to be binary value with the ax bit being 1
+      e = ~f & mask #inverses the values of binary f
+      a[ay] = e #sets multiprocessing array for row ay to equal e
+      self.p = multiprocessing.Process(name='myname', target = self.display(ay, a), args = (ay, a)) #defines multiprocessing process
+      self.p.daemon = True #sets daemon true for multiprocessing process
+      self.p.start() #starts multiprocessing process
+      time.sleep(0.1) #sleeps for .1 seconds
   def display(self, num, c):
     self.shifter.shiftByte(c[num])
     self.shifter.shiftByte(1 << (num))

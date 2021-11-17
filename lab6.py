@@ -37,9 +37,9 @@ while True:
   #p = LED8x8Copy(dataPin,latchPin,clockPin, ay, a)
   LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
   #LED.b[ay] = e
-  #LED.p.daemon = True
-  #LED.p.start()
-  #LED.p.join()
+  LED.p.daemon = True
+  LED.p.start()
+  LED.p.join()
 
   print(ay)
   time.sleep(0.1)

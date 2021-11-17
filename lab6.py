@@ -40,7 +40,7 @@ while True:
   a = [0,0,0,0,0,0,0,0]
   a[ay] = e
   #p = LED8x8Copy(dataPin,latchPin,clockPin, ay, a)
-  #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
+  LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
   LED.b[ay] = e
   #LED.p.daemon = True
   #LED.p.start()

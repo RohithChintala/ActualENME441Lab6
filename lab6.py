@@ -35,8 +35,8 @@ while True:
   a = [0,0,0,0,0,0,0,0]
   a[ay] = e
   #p = LED8x8Copy(dataPin,latchPin,clockPin, ay, a)
-  LED = LED8x8Copy(dataPin, latchPin, clockPin, ay)
-  LED.b[ay] = e
+  LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
+  #LED.b[ay] = e
   time.sleep(0.1)
   #p = multiprocessing.Process(name='myname',target=LED.display(ay, a),args=(ay, a))
   #p.daemon = True

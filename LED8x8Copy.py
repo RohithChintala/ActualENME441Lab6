@@ -7,15 +7,15 @@ class LED8x8Copy(multiprocessing.Process):
     #self.shifter = Shifter(data, latch, clock)
     #multiprocessing.Process.__init__(self, target=self.display)
     while True:
-      self.b = multiprocessing.Array('i',8)
-      self.b[num] = a[num]
+      #self.b = multiprocessing.Array('i',8)
+      #self.b[num] = a[num]
       self.shifter = Shifter(data, latch, clock)
       #self.b = multiprocessing.Array('i',8)
       #self.b[num] = a[num]
-      self.p = multiprocessing.Process(name='myname', target = self.display(num, self.b), args = (num, self.b))
+      self.p = multiprocessing.Process(name='myname', target = self.display(num, a), args = (num, a))
       #self.p.daemon = True
       #self.p.start()
       #self.p.join()
-  def display(self, num, c):
-    self.shifter.shiftByte(c[num])
+  def display(self, num, a):
+    self.shifter.shiftByte(a[num])
     self.shifter.shiftByte(1 << (num))

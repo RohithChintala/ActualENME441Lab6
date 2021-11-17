@@ -12,7 +12,7 @@ class LED8x8Copy(multiprocessing.Process):
     #self.b[num] = a
     #multiprocessing.Process.__init__(self, target=self.display(num,a), args= (num, a))
     #self.p = multiprocessing.Process(name='myname', target = self.display(num, self.b), args = (num, self.b))
-    self.p = multiprocessing.Process(name='myname', target = self.display(self.d, self.b), args = (self.d, self.b))
+    self.p = multiprocessing.Process(name='myname', target = self.display, args = (self.d, self.b))
     self.p.daemon = True
     self.p.start()
     ay = 5

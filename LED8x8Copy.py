@@ -32,7 +32,7 @@ class LED8x8Copy(multiprocessing.Process):
           h = 0
           ax -= x
           ay -= y
-      f = g << abs(7-ax)
+      f = g << abs(8-ax)
       e = ~f & mask
       b[ay] = e
       #self.d = ay

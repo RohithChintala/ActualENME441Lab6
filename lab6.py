@@ -40,6 +40,8 @@ while True:
   #LED.p.daemon = True
   #LED.p.start()
   #LED.p.join()
+
+  print(ay)
   time.sleep(0.1)
   #p = multiprocessing.Process(name='myname',target=LED.display(ay, a),args=(ay, a))
   #p.daemon = True

@@ -49,6 +49,5 @@ class LED8x8Copy(multiprocessing.Process):
       #self.p.daemon = True
       #self.p.join()
   def display(self, num, c):
-    while True:
-      self.shifter.shiftByte(c[num])
-      self.shifter.shiftByte(1 << (num))
+    self.shifter.shiftByte(c[num])
+    self.shifter.shiftByte(1 << (num))

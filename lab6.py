@@ -17,7 +17,7 @@ dataPin, latchPin, clockPin = 13, 19, 26
 #LED.p.daemon = True
 #LED.p.start()
 #LED.p.join()
-
+''''
 while True:
   h = 0
   while h == 0:
@@ -41,10 +41,9 @@ while True:
   #a[ay] = e
   #p = LED8x8Copy(dataPin,latchPin,clockPin, ay, a)
   #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
-  LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, e)
-  LED.b[ay] = e
+  #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, e)
+  #LED.b[ay] = e
   #LED.p.join()
-  time.sleep(0.1)
   #p = multiprocessing.Process(name='myname',target=LED.display(ay, a),args=(ay, a))
   #p.daemon = True
   #p.start()
@@ -53,3 +52,5 @@ while True:
     #print(e)               # delete once code is debugged
     #LED.p.terminate()      # terminate the process
     #LED.p.join(2)          # wait up to 2 sec for process
+'''
+LED = LED8x8Copy(dataPin, latchPin, clockPin)

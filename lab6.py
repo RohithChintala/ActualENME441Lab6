@@ -13,7 +13,7 @@ mask = 0b11111111
 dataPin, latchPin, clockPin = 13, 19, 26
 #a = [0,0,0,0,0,0,0,0]
 #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
-LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
+LED = LED8x8Copy(dataPin, latchPin, clockPin)
 while True:
   h = 0
   while h == 0:

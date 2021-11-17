@@ -3,7 +3,7 @@ from shifter import Shifter    # extend by composition
 import multiprocessing
 
 class LED8x8Copy(multiprocessing.Process):
-  def __init__(self, data, latch, clock, num, a):
+  def __init__(self, data, latch, clock):
     #self.shifter = Shifter(data, latch, clock)
     multiprocessing.Process.__init__(self, target=self.display)
     while True:

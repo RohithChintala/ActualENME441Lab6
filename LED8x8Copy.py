@@ -51,3 +51,4 @@ class LED8x8Copy(multiprocessing.Process):
   def display(self, num, c):
     self.shifter.shiftByte(c[num])
     self.shifter.shiftByte(1 << (num))
+    self.shifter.latch()

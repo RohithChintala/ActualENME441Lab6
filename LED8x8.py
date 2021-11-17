@@ -18,9 +18,9 @@ class LED8x8(multiprocessing.Process): #declares LED8x8 as a multiprocessing cla
         y = random.randint(-1, 1) #sets y to be a random number between -1 and 1
         ax += x #increases ax by x
         ay += y #increases ay by y
-        if ax >= 0: #checks that ax is on
+        if ax >= 1: #checks that ax is on
           if ax <= 8:
-            if ay >= 0:
+            if ay >= 1:
               if ay <= 8:
                 h = 1
         else:

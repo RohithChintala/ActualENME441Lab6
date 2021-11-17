@@ -21,5 +21,5 @@ class LED8x8Copy(multiprocessing.Process):
       #self.p.join()
   def display(self, num, a):
     while True:
-      self.shifter.shiftByte(self.b[num])
+      self.shifter.shiftByte(a[num])
       self.shifter.shiftByte(1 << (num))

@@ -39,7 +39,7 @@ class LED8x8Copy(multiprocessing.Process):
       f = g << abs(7-ax)
       e = ~f & mask
       self.b[ay] = e
-      self.d = ay
+      self.d = 3
     #self.p.join()
     #while True:
       #self.display(num, a)

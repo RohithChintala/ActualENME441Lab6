@@ -5,12 +5,13 @@ import multiprocessing
 import random
 
 
-LED= LED8x8(dataPin, latchPin, clockPin)
+
 ay = 5
 ax = 5
 g = 0b1
 mask = 0b11111111
 dataPin, latchPin, clockPin = 13, 19, 26
+LED= LED8x8(dataPin, latchPin, clockPin)
 #a = [0,0,0,0,0,0,0,0]
 #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)
 #LED = LED8x8Copy(dataPin, latchPin, clockPin, ay, a)

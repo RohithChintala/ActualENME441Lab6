@@ -5,7 +5,7 @@ import random
 
 class LED8x8Copy(multiprocessing.Process):
   def __init__(self, data, latch, clock):
-    multiprocessing.Process.__init__(self)
+    #multiprocessing.Process.__init__(self)
     self.shifter = Shifter(data, latch, clock)
     self.b = multiprocessing.Array('i',8)
     self.d = multiprocessing.Value('i')
